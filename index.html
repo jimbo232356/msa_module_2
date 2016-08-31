@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Serch it</title>
-    <!-- 
-    To collect end-user usage analytics about your application, 
-    insert the following script into each page you want to track.
-    Place this code immediately before the closing </head> tag,
-    and before any other scripts. Your first data will appear 
-    automatically in just a few seconds.
-    -->
-    <script type="text/javascript">
-      var appInsights=window.appInsights||function(config){
-        function r(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s=u.createElement(o),i,f;s.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(s);try{t.cookie=u.cookie}catch(h){}for(t.queue=[],i=["Event","Exception","Metric","PageView","Trace","Dependency"];i.length;)r("track"+i.pop());return r("setAuthenticatedUserContext"),r("clearAuthenticatedUserContext"),config.disableExceptionTracking||(i="onerror",r("_"+i),f=e[i],e[i]=function(config,r,u,e,o){var s=f&&f(config,r,u,e,o);return s!==!0&&t["_"+i](config,r,u,e,o),s}),t
-        }({
-            instrumentationKey:"39be2f40-038c-4614-9792-27a9a63d528b"
-        });
+    <head>
+        <title>Search it</title>
+        <!--Boostrap's CSS-->
+        <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <!--Custom CSS-->
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <!-- 
+        To collect end-user usage analytics about your application, 
+        insert the following script into each page you want to track.
+        Place this code immediately before the closing </head> tag,
+        and before any other scripts. Your first data will appear 
+        automatically in just a few seconds.
+        -->
+        <script type="text/javascript">
+            var appInsights=window.appInsights||function(config){
+            function r(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s=u.createElement(o),i,f;s.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(s);try{t.cookie=u.cookie}catch(h){}for(t.queue=[],i=["Event","Exception","Metric","PageView","Trace","Dependency"];i.length;)r("track"+i.pop());return r("setAuthenticatedUserContext"),r("clearAuthenticatedUserContext"),config.disableExceptionTracking||(i="onerror",r("_"+i),f=e[i],e[i]=function(config,r,u,e,o){var s=f&&f(config,r,u,e,o);return s!==!0&&t["_"+i](config,r,u,e,o),s}),t
+            }({
+                instrumentationKey:"39be2f40-038c-4614-9792-27a9a63d528b"
+            });
        
-        window.appInsights=appInsights;
-        appInsights.trackPageView();
-    </script>
-  </head>
+            window.appInsights=appInsights;
+            appInsights.trackPageView();
+        </script>
+    </head>
 
-  <body>
-    <h1>Congratulations</h1>
-    <p>I did it!!!!</p>
-  </body>
+    <body>
+        <h1>[Congratulations]</h1>
+        <p>I did it!!!!</p>
+            <!--jQuery Script-->
+            <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+            <!--Bootstrap Script-->
+            <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    </body>
 </html>
