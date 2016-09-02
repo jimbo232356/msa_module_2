@@ -12,7 +12,7 @@ searchbutton.addEventListener("click", function () {
 });
 
 function changeUI() : void {
-    pageheader.innerHTML = "Here is a result"
+    pageheader.innerHTML = "Here is a result";
     result.innerHTML = " ";
     searchbutton.style.display = "none";
 }
