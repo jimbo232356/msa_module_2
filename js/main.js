@@ -7,10 +7,11 @@ var result = $("resultsDiv")[0];
 // Register button listeners
 searchbutton.addEventListener("click", function () {
     pageheader.innerHTML = "Just a sec while we find";
+    result.innerHTML = "Hello1";
     changeUI();
 });
 function changeUI() {
     pageheader.innerHTML = "Here is a result";
-    result.innerHTML = "Hello";
+    result.innerHTML = "Hello-2";
     searchbutton.style.display = "none";
 }
