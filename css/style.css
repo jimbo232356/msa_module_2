@@ -31,6 +31,10 @@ h1#app-name {
     font-size:84px;
 }
 
+.btn-wrapper {
+    padding: 20px 0;
+}
+
 .container-1{
   width: 300px;
   vertical-align: middle;
