@@ -34,14 +34,15 @@
                 Find information based on your word.
             </h2>
             <div class ="container" id="searchBox">
-                <form action="#" method="get">
+                <form id="searchForm" method="post">
                     <div class="form-group">
                         <label for="InputSearch"></label>
-                        <input type="text" class="form-control" id="InputSearch" placeholder="Type anything">
+                        <input type="text" class="form-control" id="InputSearch" placeholder="Type anything" required>
                     </div>
                     <button type="submit" class="btn btn-info" id="SearchButton"> Search! </button>
                 </form>
             </div>
+            <div id="resultsDiv"></div>
         </div>
         <!--jQuery Script-->
         <script src="./node_modules/jquery/dist/jquery.min.js"></script>
