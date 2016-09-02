@@ -33,8 +33,13 @@
             <h2 id="page-header">
                 Find information based on your word.
             </h2>
-            <input type="text" id="InputSearch" placeholder="Type anything" size="30">
-            <button class="btn btn-info" id="SearchButton"> Search! </button>
+            <form class = "form-inline" id="searchForm" method="post">
+                <div class="form-group">
+                    <label for="InputSearch"></label>
+                    <input type="text" class="form-control" id="InputSearch" placeholder="Type anything" size="30">
+                </div>
+                <button type="submit" class="btn btn-info" id="SearchButton"> Search! </button>
+            </form>
             <h3 id="resultsDiv">
                 Results should on here
             </h3>
