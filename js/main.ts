@@ -3,6 +3,7 @@ var pageheader = $("#page-header")[0];
 var pagecontainer = $("#page-container")[0];
 var searchbar = $("#searchbar")[0];
 var searchbutton = $("#SearchButton")[0];
+var resultsdiv = $("#resultsDiv")[0];
 
 // Register button listeners
 searchbutton.addEventListener("click", function () {
@@ -13,7 +14,7 @@ searchbutton.addEventListener("click", function () {
 function changeUI() : void {
     pageheader.innerHTML = "Results";
     searchbar.style.display = "none";
-    $("#resultsDiv")[0].style.display = "block";
-    var div = $("#resultsDiv")[0]; 
+    resultsdiv.style.display = "block";
+    var div = resultsdiv; 
     div.innerHTML = "Hello";
 }
