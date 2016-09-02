@@ -67,3 +67,8 @@ h1#app-name {
 .container-1 input#search:-ms-input-placeholder {  
    color: #65737e;  
 }
+
+.container-1 input#search:hover, .container-1 input#search:focus, .container-1 input#search:active{
+    outline:none;
+    background: #ffffff;
+  }
