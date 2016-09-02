@@ -15,6 +15,6 @@ function changeUI() {
     searchbar.style.display = "none";
     resultsdiv.style.display = "block";
     var div = resultsdiv;
-    var s = document.getElementById("#search").value;
+    var s = document.getElementById("#search").nodeValue;
     div.innerHTML = s;
 }
