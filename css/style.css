@@ -33,6 +33,10 @@ div#searchbar {
     height: 50px;
 }
 
+input#search {
+    display:inline;
+}
+
 #resultsDiv {
     padding:20px;
     display:none;
