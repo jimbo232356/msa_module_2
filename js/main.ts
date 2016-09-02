@@ -17,6 +17,6 @@ function changeUI() : void {
     searchbar.style.display = "none";
     resultsdiv.style.display = "block";
     var div = resultsdiv;
-    var s = search.files[0];
-    div.innerHTML = "Hello";
+    var s = (<HTMLInputElement>document.getElementById("#search")).value;
+    div.innerHTML = s;
 }
