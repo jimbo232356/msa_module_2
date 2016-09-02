@@ -11,7 +11,7 @@ searchbutton.addEventListener("click", function () {
 function changeUI() {
     pageheader.innerHTML = "Results";
     searchbar.style.display = "none";
-    $("resultsDiv")[0].style.display = "block";
+    $("#resultsDiv")[0].style.display = "block";
     var div = $("#musicplayer")[0];
     div.innerHTML = "Hello";
 }
