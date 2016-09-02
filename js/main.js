@@ -11,6 +11,6 @@ searchbutton.addEventListener("click", function () {
 });
 function changeUI() {
     pageheader.innerHTML = "Here is a result";
-    searchbutton.style.display = "none";
+    $("#box")[0].style.display = "none";
     resultsdiv.style.display = "block";
 }

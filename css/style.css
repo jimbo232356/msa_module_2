@@ -22,10 +22,6 @@ h2#page-header {
     padding-bottom:20px;
 }
 
-button#SearchButton {
-    display:inline;
-}
-
 h3#resultsDiv {
     padding:20px;
     display:none;
@@ -36,6 +32,7 @@ h1#app-name {
 }
 
 .box{
+    display:block;
     margin: 10px auto;
     width: 400px;
     height: 50px;
