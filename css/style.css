@@ -39,7 +39,7 @@ h1#app-name {
   width: 300px;
   vertical-align: middle;
   white-space: nowrap;
-  position: relative;
+  position: center;
 }
 
 .container-1 input#search{
