@@ -24,3 +24,7 @@ h1#app-name {
 #searchBox {
     width: 500px;
 }
+
+button#refreshbtn {
+    display:none;
+}
