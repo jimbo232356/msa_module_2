@@ -30,7 +30,7 @@ div#searchbar {
     display:inline;
 }
 
-h3#resultsDiv {
+div#resultsDiv {
     padding:20px;
     display:none;
 }
