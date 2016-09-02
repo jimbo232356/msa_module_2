@@ -1,4 +1,4 @@
-// Get elements from DOM
+/*// Get elements from DOM
 var pageheader = $("#page-header")[0];
 var pagecontainer = $("#page-container")[0];
 var inputsearch = $("#InputSearch")[0];
@@ -14,4 +14,4 @@ searchbutton.addEventListener("click", function () {
 function changeUI() : void {
     pageheader.innerHTML = "Here is a result"
     pageheader.innerHTML = "Change?"
-}
+}*/
