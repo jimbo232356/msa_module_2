@@ -5,7 +5,7 @@ var inputsearch= $("#InputSearch")[0];
 var refreshbtn = $("#refreshbtn")[0];
 
 // Register button listeners
-inputsearch.addEventListener("change", function () {
+refreshbtn.addEventListener("click", function () {
     pageheader.innerHTML = "Just a sec while we find";
 
 });
