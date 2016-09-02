@@ -7,5 +7,9 @@ var searchbutton= $("#SearchButton")[0];
 // Register button listeners
 searchbutton.addEventListener("click", function () {
     pageheader.innerHTML = "Just a sec while we find";
-
+    changeUI();
 });
+
+function changeUI() : void {
+    pageheader.innerHTML = "Here is a result"
+}
