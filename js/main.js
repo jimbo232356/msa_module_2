@@ -12,5 +12,6 @@ searchbutton.addEventListener("click", function () {
 function changeUI() {
     pageheader.innerHTML = "Here is a result";
     searchbar.style.display = "none";
+    resultsdiv.innerHTML = "Hello";
     resultsdiv.style.display = "block";
 }
