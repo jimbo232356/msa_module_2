@@ -33,7 +33,8 @@ div#searchbar {
     height: 50px;
 }
 
-div#resultsDiv {
+#resultsDiv {
+    padding:20px;
     display:none;
 }
 
