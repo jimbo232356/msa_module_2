@@ -1,7 +1,7 @@
 // Get elements from DOM
 var pageheader = $("#page-header")[0];
 var pagecontainer = $("#page-container")[0];
-var search = $("#search")[0];
+var searchbar = $("#searchbar")[0];
 var searchbutton = $("#SearchButton")[0];
 var resultsdiv = $("resultsDiv")[0];
 // Register button listeners
@@ -11,6 +11,6 @@ searchbutton.addEventListener("click", function () {
 });
 function changeUI() {
     pageheader.innerHTML = "Here is a result";
-    $("#box")[0].style.display = "none";
+    searchbar.style.display = "none";
     resultsdiv.style.display = "block";
 }
