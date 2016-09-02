@@ -13,6 +13,5 @@ searchbutton.addEventListener("click", function () {
 
 function changeUI() : void {
     pageheader.innerHTML = "Here is a result"
-    result.innerHTML = "inputsearch.textContent";
-    pageheader.innerHTML = "Change?"
+    result.innerHTML = inputsearch.textContent;
 }
