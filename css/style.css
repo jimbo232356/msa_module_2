@@ -17,6 +17,11 @@ body #page-container {
     margin-bottom: 40px;
 }
 
+h2#page-header {
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
 h1#app-name {
     font-size:84px;
 }
