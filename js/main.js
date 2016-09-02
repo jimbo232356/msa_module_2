@@ -11,5 +11,6 @@ searchbutton.addEventListener("click", function () {
 });
 function changeUI(r) {
     pageheader.innerHTML = "Here is a result";
-    result.innerHTML = r;
+    var disR = r;
+    result.innerHTML = disR;
 }
