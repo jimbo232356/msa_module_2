@@ -27,8 +27,8 @@ button#SearchButton {
 }
 
 h3#resultsDiv {
-    padding-top:20px;
-    padding-bottom:20px;
+    padding:20px;
+    display:none;
 }
 
 h1#app-name {

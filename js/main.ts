@@ -8,12 +8,11 @@ var resultsdiv = $("resultsDiv")[0];
 // Register button listeners
 searchbutton.addEventListener("click", function () {
     pageheader.innerHTML = "Just a sec while we find";
-    resultsdiv.innerHTML = "Hello1";
     changeUI();
 });
 
 function changeUI() : void {
     pageheader.innerHTML = "Here is a result";
-    resultsdiv.innerHTML = "Hello-2";
     searchbutton.style.display = "none";
+    resultsdiv.style.display = "block";
 }
