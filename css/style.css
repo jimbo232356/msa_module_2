@@ -30,3 +30,8 @@ h3#resultsDiv {
 h1#app-name {
     font-size:84px;
 }
+
+#search {
+    color: black;
+    background-color: transparent;
+}
