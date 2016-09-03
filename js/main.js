@@ -22,7 +22,7 @@ function changeUI() {
 function loadResults(div, searchResults) {
     var searchDisplay;
     var pageNo = 0;
-    div.innerHTML = searchResults.find(findId);
+    div.innerHTML = searchResults[0].find(findId);
 }
 function findId(list) {
     return list.id === "https://api.cognitive.microsoft.com/api/v5/#WebPages.0";
@@ -46,7 +46,7 @@ function callBingRequest(s, callback) {
         .done(function (data) {
         if (data.length != 0) {
             // Get the results
-            var webpages = data[0].value;
+            var webpages = data.webPages.value;
             callback(webpages);
         }
         else {

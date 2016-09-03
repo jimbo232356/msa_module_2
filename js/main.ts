@@ -25,7 +25,7 @@ function changeUI() : void {
 function loadResults(div, searchResults) : void {
     var searchDisplay : searchWebPages;
     var pageNo = 0;
-    div.innerHTML = searchResults.find(findId);
+    div.innerHTML = searchResults[0].find(findId);
 }
 
 function findId(list) {
@@ -51,7 +51,7 @@ function callBingRequest(s, callback) : void {
         .done(function (data) {
             if (data.length != 0) { // if a results are detected
                 // Get the results
-                var webpages = data[0].value;
+                var webpages = data.webPages.value;
                 callback(webpages);
             } else {
                 pageheader.innerHTML = "Hmm, we can't find any results. Try another?";
