@@ -5,6 +5,7 @@ var searchbar = $("#searchbar")[0];
 var searchbutton = $("#SearchButton")[0];
 var search : HTMLInputElement = <HTMLInputElement> $("#search")[0];
 var resultsdiv = $("#resultsDiv")[0];
+var searchCount = 5;
 
 // Register button listeners
 searchbutton.addEventListener("click", function () {
@@ -23,16 +24,24 @@ function changeUI() : void {
 }
 
 function loadResults(div, searchResults) : void {
-    var searchDisplay : searchWebPages;
-    var pageNo = 0;
-    div.innerHTML = searchResults[0].name;
+    var searchDisplay : Array<searchWebPages>;
+    for (var pageNo = 0; pageNo < searchCount; pageNo++){
+        searchDisplay[pageNo].id = searchResults[pageNo].id;
+        searchDisplay[pageNo].name = searchResults[pageNo].name;
+        searchDisplay[pageNo].url = searchResults[pageNo].url;
+        searchDisplay[pageNo].displayUrl = searchResults[pageNo].displayUrl;
+        searchDisplay[pageNo].snippet = searchResults[pageNo].snippet;
+        searchDisplay[pageNo].dateLastCrawled = searchResults[pageNo].dateLastCrawled;
+    }
+
+    div.innerHTML = searchDisplay[1].name;
 }
 
 function callBingRequest(s, callback) : void {
     var params = {
         // Request parameters
         "q": s,
-        "count": "5",
+        "count": searchCount,
     };
     $.ajax({
         url: "https://api.cognitive.microsoft.com/bing/v5.0/search?" + $.param(params),
