@@ -12,7 +12,6 @@ searchbutton.addEventListener("click", function () {
 });
 function changeUI() {
     pageheader.innerHTML = "Results";
-    searchbar.style.display = "none";
     resultsdiv.style.display = "block";
     var div = resultsdiv;
     var s = document.getElementById("search").value;
