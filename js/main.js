@@ -22,7 +22,7 @@ function changeUI() {
 function loadResults(div, searchResults) {
     var searchDisplay;
     var pageNo = 0;
-    div.innerHTML = searchResults.find(findId);
+    div.innerHTML = searchResults.value.find(findId);
 }
 function findId(list) {
     return list.id === "https://api.cognitive.microsoft.com/api/v5/#WebPages.0";

@@ -25,7 +25,7 @@ function changeUI() : void {
 function loadResults(div, searchResults) : void {
     var searchDisplay : searchWebPages;
     var pageNo = 0;
-    div.innerHTML = searchResults.find(findId);
+    div.innerHTML = searchResults.value.find(findId);
 }
 
 function findId(list) {
