@@ -42,8 +42,8 @@ function callBingRequest(s, callback) {
             .done(function (data) {
             if (data.length != 0) {
                 // Get the results
-                var value = data[0].value;
-                callback(value);
+                var webpages = data[0].webPages;
+                callback(webpages);
             }
             else {
                 pageheader.innerHTML = "Hmm, we can't find any results. Try another?";
