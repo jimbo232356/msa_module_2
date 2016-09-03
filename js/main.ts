@@ -25,11 +25,7 @@ function changeUI() : void {
 function loadResults(div, searchResults) : void {
     var searchDisplay : searchWebPages;
     var pageNo = 0;
-    div.innerHTML = searchResults[0].id;
-}
-
-function findId(list) {
-    return list.id === "https://api.cognitive.microsoft.com/api/v5/#WebPages.0"
+    div.innerHTML = searchResults[0].name;
 }
 
 function callBingRequest(s, callback) : void {
