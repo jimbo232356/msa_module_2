@@ -27,18 +27,25 @@ function loadResults(div, s) : void {
 }
 
 function callBingRequest(s, callback) : void {
-    var count = "5"
+    $(function() {
+        var params = {
+            // Request parameters
+            "q": s,
+            "count": "5",
+        };
     $.ajax({
-        url: "https://api.cognitive.microsoft.com/bing/v5.0/search?q=" + s + "&count=" + count,
+        url: "https://api.cognitive.microsoft.com/bing/v5.0/search?" + $.param(params),
         beforeSend: function (xhrObj) {
             // Request headers
             xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", "ca65418759df4eb1a8826f23cd72c483");
         },
-        type: "POST",
+        type: "GET",
+        // Request body
+        data: "{body}",
     })
         .done(function (data) {
-            if (data.length != 0) { // if a face is detected
-                // Get the emotion scores
+            if (data.length != 0) { // if a results are detected
+                // Get the results
                 var value = data[0].value;
                 callback(value);
             } else {
