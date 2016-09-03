@@ -21,7 +21,11 @@ function changeUI() {
 }
 function loadResults(div, searchResults) {
     var searchDisplay;
-    div.innerHTML = searchResults;
+    var pageNo = 0;
+    div.innerHTML = searchResults.find(findId);
+}
+function findId(list) {
+    return list.id === "https://api.cognitive.microsoft.com/api/v5/#WebPages.0";
 }
 function callBingRequest(s, callback) {
     var params = {
