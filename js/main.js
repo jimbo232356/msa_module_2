@@ -19,8 +19,9 @@ function changeUI() {
     pageheader.innerHTML = "Results";
     resultsdiv.style.display = "block";
 }
-function loadResults(div, s) {
-    div.innerHTML = s;
+function loadResults(div, searchResults) {
+    var searchDisplay;
+    div.innerHTML = searchResults.id;
 }
 function callBingRequest(s, callback) {
     var params = {
@@ -53,3 +54,20 @@ function callBingRequest(s, callback) {
         console.log(error.getAllResponseHeaders());
     });
 }
+var searchWebPages = (function () {
+    function searchWebPages(inputId, inputName, inputUrl, inputDisplayUrl, inputSnippet, inputDataLastCrawled) {
+        this.inputId = inputId;
+        this.inputName = inputName;
+        this.inputUrl = inputUrl;
+        this.inputDisplayUrl = inputDisplayUrl;
+        this.inputSnippet = inputSnippet;
+        this.inputDataLastCrawled = inputDataLastCrawled;
+        this.id = inputId;
+        this.name = inputName;
+        this.url = inputUrl;
+        this.displayUrl = inputDisplayUrl;
+        this.snippet = inputSnippet;
+        this.dateLastCrawled = inputDataLastCrawled;
+    }
+    return searchWebPages;
+}());

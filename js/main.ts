@@ -22,8 +22,9 @@ function changeUI() : void {
     resultsdiv.style.display = "block";
 }
 
-function loadResults(div, s) : void {
-    div.innerHTML = s;
+function loadResults(div, searchResults) : void {
+    var searchDisplay : searchWebPages;
+    div.innerHTML = searchResults.id;
 }
 
 function callBingRequest(s, callback) : void {
@@ -55,4 +56,21 @@ function callBingRequest(s, callback) : void {
             pageheader.innerHTML = "Sorry, something went wrong. :( Try again in a bit?";
             console.log(error.getAllResponseHeaders());
         });
+}
+
+class searchWebPages {
+    id: string;
+    name: string;
+    url: string;
+    displayUrl: string;
+    snippet: string;
+    dateLastCrawled: string;
+    constructor(public inputId, public inputName, public inputUrl, public inputDisplayUrl, public inputSnippet, public inputDataLastCrawled) {
+        this.id = inputId;
+        this.name = inputName;
+        this.url = inputUrl;
+        this.displayUrl = inputDisplayUrl;
+        this.snippet = inputSnippet;
+        this.dateLastCrawled = inputDataLastCrawled;
+    }
 }
