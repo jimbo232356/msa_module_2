@@ -41,7 +41,7 @@ function callBingRequest(s, callback) {
         .done(function (data) {
         if (data.length != 0) {
             // Get the results
-            var webpages = data.value.name;
+            var webpages = data.value[0];
             callback(webpages);
         }
         else {
