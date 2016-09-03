@@ -24,7 +24,7 @@ function changeUI() : void {
 
 function loadResults(div, searchResults) : void {
     var searchDisplay : searchWebPages;
-    div.innerHTML = searchResults.id;
+    div.innerHTML = searchResults[0].id;
 }
 
 function callBingRequest(s, callback) : void {

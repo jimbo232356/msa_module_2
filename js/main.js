@@ -21,7 +21,7 @@ function changeUI() {
 }
 function loadResults(div, searchResults) {
     var searchDisplay;
-    div.innerHTML = searchResults.id;
+    div.innerHTML = searchResults[0].id;
 }
 function callBingRequest(s, callback) {
     var params = {
