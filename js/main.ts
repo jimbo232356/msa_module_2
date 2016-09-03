@@ -27,12 +27,11 @@ function loadResults(div, s) : void {
 }
 
 function callBingRequest(s, callback) : void {
-    $(function() {
-        var params = {
-            // Request parameters
-            "q": s,
-            "count": "5",
-        };
+    var params = {
+        // Request parameters
+        "q": s,
+        "count": "5",
+    };
     $.ajax({
         url: "https://api.cognitive.microsoft.com/bing/v5.0/search?" + $.param(params),
         beforeSend: function (xhrObj) {
