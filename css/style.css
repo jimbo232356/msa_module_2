@@ -89,3 +89,23 @@ input#search {
     outline:none;
     background: #ffffff;
 }
+
+/* Web & news results */
+
+.webResult{ text-shadow:1px 1px 0 #586a75;margin-bottom:50px;}
+.webResult h2{
+	background-color:#5D6F7B;
+	font-size:18px;
+	font-weight:normal;
+	padding:8px 20px;
+
+	/* Applying CSS3 rounded corners */
+	-moz-border-radius:18px;
+	-webkit-border-radius:18px;
+	border-radius:18px;
+}
+.webResult h2 b{ color:#fff; }
+.webResult h2 a{ color:#eee;border:none;}
+.webResult p{ line-height:1.5;padding:15px 20px;}
+.webResult p b{ color:white;}
+.webResult > a{ margin-left:20px;}
