@@ -21,7 +21,7 @@ function changeUI() {
     resultsdiv.style.display = "block";
 }
 function loadResults(div, searchResults) {
-    var searchDisplay;
+    var searchDisplay = [new searchWebPages("", "", "", "", "", ""), new searchWebPages("", "", "", "", "", ""), new searchWebPages("", "", "", "", "", ""), new searchWebPages("", "", "", "", "", ""), new searchWebPages("", "", "", "", "", "")];
     for (var pageNo = 0; pageNo < searchCount; pageNo++) {
         searchDisplay[pageNo].id = searchResults[pageNo].id;
         searchDisplay[pageNo].name = searchResults[pageNo].name;
