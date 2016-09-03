@@ -13,7 +13,7 @@ searchbutton.addEventListener("click", function () {
     var s = (<HTMLInputElement>document.getElementById("search")).value;
     callBingRequest(s, function(searchResults) {
         changeUI();
-        loadResults(div, s);
+        loadResults(div, searchResults);
     });
 });
 
