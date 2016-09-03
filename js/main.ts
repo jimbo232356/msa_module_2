@@ -17,5 +17,9 @@ function changeUI() : void {
     resultsdiv.style.display = "block";
     var div = resultsdiv;
     var s = (<HTMLInputElement>document.getElementById("search")).value;
+    loadResults(div, s);
+}
+
+function loadResults(div, s) : void {
     div.innerHTML = s;
 }
