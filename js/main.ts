@@ -24,7 +24,7 @@ function changeUI() : void {
 }
 
 function loadResults(div, searchResults) : void {
-    var searchDisplay : Array<searchWebPages>;
+    var searchDisplay : searchWebPages[];
     for (var pageNo = 0; pageNo < searchCount; pageNo++){
         searchDisplay[pageNo].id = searchResults[pageNo].id;
         searchDisplay[pageNo].name = searchResults[pageNo].name;
