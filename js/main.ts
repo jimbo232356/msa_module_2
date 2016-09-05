@@ -43,6 +43,7 @@ function loadResults(div, searchResults) : void {
     for (var j=0; j<searchCount; j++){
         str = str + resultshape(searchDisplay[j]);
     }
+    div.empty();
     div.innerHTML = str;
 }
 

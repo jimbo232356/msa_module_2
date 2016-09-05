@@ -39,6 +39,7 @@ function loadResults(div, searchResults) {
     for (var j = 0; j < searchCount; j++) {
         str = str + resultshape(searchDisplay[j]);
     }
+    div.empty();
     div.innerHTML = str;
 }
 function resultshape(searchDisplay) {
