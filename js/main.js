@@ -34,7 +34,12 @@ function loadResults(div, searchResults) {
         searchDisplay[pageNo].displayUrl = searchResults[pageNo].displayUrl;
         searchDisplay[pageNo].snippet = searchResults[pageNo].snippet;
     }
-    div.innerHTML = resultshape(searchDisplay[1]);
+    //Collect html shapes for searchDisplay
+    var str = "";
+    for (var j = 0; j < searchCount; j++) {
+        str = str + resultshape(searchDisplay[j]);
+    }
+    div.innerHTML = str;
 }
 function resultshape(searchDisplay) {
     var arr = [

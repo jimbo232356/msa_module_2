@@ -38,7 +38,12 @@ function loadResults(div, searchResults) : void {
         searchDisplay[pageNo].snippet = searchResults[pageNo].snippet;
         //searchDisplay[pageNo].dateLastCrawled = searchResults[pageNo].dateLastCrawled;
     }
-    div.innerHTML = resultshape(searchDisplay[1]);
+    //Collect html shapes for searchDisplay
+    var str : string = "";
+    for (var j=0; j<searchCount; j++){
+        str = str + resultshape(searchDisplay[j]);
+    }
+    div.innerHTML = str;
 }
 
 function resultshape(searchDisplay) {
