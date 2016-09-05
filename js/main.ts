@@ -44,7 +44,7 @@ function loadResults(div, searchResults) : void {
 		// Creating a new result object and firing its toString method:
 		pageContainer.append(resultshape(searchDisplay[i]) + '');
 	}
-	div.empty();
+	$("#resultsDiv").empty();
     pageContainer.append('<div class="clear"></div>')
 		.hide().appendTo(div)
 		.fadeIn('slow');
