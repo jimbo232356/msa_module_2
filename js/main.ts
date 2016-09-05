@@ -49,7 +49,7 @@ function resultshape(searchDisplay) {
 		"<a href=" + searchDisplay.url + ">" + searchDisplay.displayUrl + "</a>",
 		"</div>"
 	];
-	return arr.join();
+	return arr.join("");
 }
 
 function callBingRequest(s, callback) : void {
