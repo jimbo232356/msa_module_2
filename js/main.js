@@ -68,7 +68,7 @@ function callBingRequest(s, callback) {
         data: "{body}",
     })
         .done(function (data) {
-        if (data.webPages.value != {}) {
+        if (data.rankingRespons != {}) {
             // Get the results
             var webpages = data.webPages.value;
             callback(webpages);
