@@ -34,20 +34,17 @@ function loadResults(div, searchResults) {
         searchDisplay[pageNo].displayUrl = searchResults[pageNo].displayUrl;
         searchDisplay[pageNo].snippet = searchResults[pageNo].snippet;
     }
-    div.innerHTML = resultshape(searchDisplay[1] + '');
+    div.innerHTML = resultshape(searchDisplay[1]);
 }
 function resultshape(searchDisplay) {
     var arr = [
-        '<div class="webResult">',
-        '<h2><a href="', searchDisplay.url, '">', searchDisplay.name, '</a></h2>',
-        '<p>', searchDisplay.snippet, '</p>',
-        '<a href="', searchDisplay.url, '">', searchDisplay.displayUrl, '</a>',
-        '</div>'
+        "<div class='webResult'>",
+        "<h2><a href='searchDisplay.url'>'searchDisplay.name'</a></h2>",
+        "<p>'searchDisplay.snippet'</p>",
+        "<a href='searchDisplay.url'>'searchDisplay.displayUrl'</a>",
+        "</div>"
     ];
-    // The toString method.
-    this.toString = function () {
-        return arr.join('');
-    };
+    return arr.join("<br>");
 }
 function callBingRequest(s, callback) {
     var params = {
