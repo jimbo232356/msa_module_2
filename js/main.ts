@@ -38,7 +38,7 @@ function loadResults(div, searchResults) : void {
         searchDisplay[pageNo].snippet = searchResults[pageNo].snippet;
         //searchDisplay[pageNo].dateLastCrawled = searchResults[pageNo].dateLastCrawled;
     }
-    div.innerHTML = resultshape(searchDisplay[1]);
+    div.innerHTML = resultshape(searchDisplay[1] + '');
 }
 
 function resultshape(searchDisplay) {
@@ -49,7 +49,10 @@ function resultshape(searchDisplay) {
 		'<a href="',searchDisplay.url,'">',searchDisplay.displayUrl,'</a>',
 		'</div>'
 	];
-	return arr;
+	// The toString method.
+	this.toString = function(){
+		return arr.join('');
+	}
 }
 
 function callBingRequest(s, callback) : void {
