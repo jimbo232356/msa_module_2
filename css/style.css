@@ -92,7 +92,7 @@ input#search {
 
 /* Web & news results */
 
-.webResult{ text-shadow:1px 1px 0 #586a75;margin-bottom:50px;}
+.webResult{ width: 1000px; text-shadow:1px 1px 0 #586a75;margin-bottom:50px;}
 .webResult h2{
 	background-color:#5D6F7B;
 	font-size:18px;
