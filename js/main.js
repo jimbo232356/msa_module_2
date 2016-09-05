@@ -44,10 +44,7 @@ function resultshape(searchDisplay) {
         '<a href="', searchDisplay.url, '">', searchDisplay.displayUrl, '</a>',
         '</div>'
     ];
-    // The toString method.
-    this.toString = function () {
-        return arr.join('');
-    };
+    return arr;
 }
 function callBingRequest(s, callback) {
     var params = {
