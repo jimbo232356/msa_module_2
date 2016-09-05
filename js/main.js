@@ -39,7 +39,7 @@ function loadResults(div, searchResults) {
     for (var j = 0; j < searchCount; j++) {
         str = str + resultshape(searchDisplay[j]);
     }
-    $("resultsDiv").empty();
+    $("#resultsDiv").empty();
     div.innerHTML = str;
 }
 function resultshape(searchDisplay) {
