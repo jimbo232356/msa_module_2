@@ -104,6 +104,8 @@ input#search {
 	-webkit-border-radius:18px;
 	border-radius:18px;
 }
+.webResult a:link { color: red; }
+.webResult a:hover { color: hotpink; }
 .webResult h2 b{ color:#fff; }
 .webResult h2 a{ color:#eee;border:none;}
 .webResult p{ line-height:1.5;padding:15px 20px;}
