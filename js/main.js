@@ -44,6 +44,7 @@ function loadResults(div, searchResults) {
 function resultshape(searchDisplay) {
     var arr = [
         "<div class='webResult'>",
+        "<body link='red'>",
         "<h2><a href=" + searchDisplay.url + ">" + searchDisplay.name + "</a></h2>",
         "<p>" + searchDisplay.snippet + "</p>",
         "<a href=" + searchDisplay.url + ">" + searchDisplay.displayUrl + "</a>",
