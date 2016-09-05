@@ -81,7 +81,7 @@ function callBingRequest(s, callback) : void {
                     callback(webpages);
             } else {
                 pageheader.innerHTML = "Hmm, we can't find any results. Try another?";
-                $("resultsDiv").empty();
+                $("#resultsDiv").empty();
             }
         })
         .fail(function (error) {
