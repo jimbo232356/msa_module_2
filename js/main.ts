@@ -74,7 +74,7 @@ function callBingRequest(s, callback) : void {
         data: "{body}",
     })
         .done(function (data) {
-            if (data.webPages != {}) { // if a results are detected
+            if (data.webPages.value != {}) { // if a results are detected
                     // Get the results
                     var webpages = data.webPages.value;
                     callback(webpages);
