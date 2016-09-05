@@ -34,16 +34,7 @@ function loadResults(div, searchResults) {
         searchDisplay[pageNo].displayUrl = searchResults[pageNo].displayUrl;
         searchDisplay[pageNo].snippet = searchResults[pageNo].snippet;
     }
-    //Add it to div
-    var pageContainer = $('<div>', { className: 'pageContainer' });
-    for (var i = 0; i < searchCount; i++) {
-        // Creating a new result object and firing its toString method:
-        pageContainer.append(resultshape(searchDisplay[i]) + '');
-    }
-    $("#resultsDiv").empty();
-    pageContainer.append('<div class="clear"></div>')
-        .hide().appendTo(div)
-        .fadeIn('slow');
+    div.innerHTML = resultshape(searchDisplay[1]);
 }
 function resultshape(searchDisplay) {
     var arr = [
