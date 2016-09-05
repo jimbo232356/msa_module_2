@@ -68,7 +68,7 @@ function callBingRequest(s, callback) {
         data: "{body}",
     })
         .done(function (data) {
-        if (data.rankingResponse != {}) {
+        if ((data.find(findWebPages)).length != 0) {
             // Get the results
             var webpages = data.webPages.value;
             callback(webpages);
@@ -81,6 +81,9 @@ function callBingRequest(s, callback) {
         pageheader.innerHTML = "Sorry, something went wrong. :( Try again in a bit?";
         console.log(error.getAllResponseHeaders());
     });
+}
+function findWebPages(data) {
+    return data === "webPages";
 }
 var searchWebPages = (function () {
     function searchWebPages(inputId, inputName, inputUrl, inputDisplayUrl, inputSnippet, inputDataLastCrawled) {

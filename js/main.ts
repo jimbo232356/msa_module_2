@@ -74,8 +74,8 @@ function callBingRequest(s, callback) : void {
         data: "{body}",
     })
         .done(function (data) {
-            if (data.rankingResponse != {}) { // if a results are detected
-                // Get the results
+            if ( (data.find(findWebPages)).length != 0) { // if a results are detected
+                 // Get the results
                 var webpages = data.webPages.value;
                 callback(webpages);
             } else {
@@ -86,6 +86,10 @@ function callBingRequest(s, callback) : void {
             pageheader.innerHTML = "Sorry, something went wrong. :( Try again in a bit?";
             console.log(error.getAllResponseHeaders());
         });
+}
+
+function findWebPages(data) {
+    return data === "webPages"
 }
 
 class searchWebPages {
