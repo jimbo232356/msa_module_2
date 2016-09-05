@@ -44,7 +44,7 @@ function resultshape(searchDisplay) {
         "<a href=" + searchDisplay.url + ">" + searchDisplay.displayUrl + "</a>",
         "</div>"
     ];
-    return arr.join("<br>");
+    return arr.join();
 }
 function callBingRequest(s, callback) {
     var params = {
