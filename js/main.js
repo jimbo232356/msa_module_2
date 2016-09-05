@@ -22,18 +22,37 @@ function changeUI() {
 }
 function loadResults(div, searchResults) {
     var searchDisplay = [];
+    //Define searchDIsplay
     for (var i = 0; i < searchCount; i++) {
         searchDisplay.push(new searchWebPages("", "", "", "", "", ""));
     }
+    //Load data into searchDisplay
     for (var pageNo = 0; pageNo < searchCount; pageNo++) {
-        searchDisplay[pageNo].id = searchResults[pageNo].id;
+        //searchDisplay[pageNo].id = searchResults[pageNo].id;
         searchDisplay[pageNo].name = searchResults[pageNo].name;
         searchDisplay[pageNo].url = searchResults[pageNo].url;
         searchDisplay[pageNo].displayUrl = searchResults[pageNo].displayUrl;
         searchDisplay[pageNo].snippet = searchResults[pageNo].snippet;
-        searchDisplay[pageNo].dateLastCrawled = searchResults[pageNo].dateLastCrawled;
     }
-    div.innerHTML = searchDisplay[1].name;
+    //Add it to div
+    var pageContainer = $('<div>', { className: 'pageContainer' });
+    for (var i = 0; i < searchCount; i++) {
+        // Creating a new result object and firing its toString method:
+        pageContainer.append(resultshape(searchDisplay[i]) + '');
+    }
+    div.empty();
+    pageContainer.append('<div class="clear"></div>')
+        .hide().appendTo(div)
+        .fadeIn('slow');
+}
+function resultshape(searchDisplay) {
+    var arr = [
+        '<div class="webResult">',
+        '<h2><a href="', searchDisplay.url, '">', searchDisplay.name, '</a></h2>',
+        '<p>', searchDisplay.snippet, '</p>',
+        '<a href="', searchDisplay.url, '">', searchDisplay.displayUrl, '</a>',
+        '</div>'
+    ];
 }
 function callBingRequest(s, callback) {
     var params = {
