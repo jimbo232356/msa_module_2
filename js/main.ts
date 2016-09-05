@@ -24,7 +24,7 @@ function changeUI() : void {
 }
 
 function loadResults(div, searchResults) : void {
-    var searchDisplay : searchWebPages[] = [new searchWebPages("","","","","",""), new searchWebPages("","","","","",""), new searchWebPages("","","","","",""), new searchWebPages("","","","","",""), new searchWebPages("","","","","","")];
+    var searchDisplay : searchWebPages[] = new searchWebPages("","","","","","")[searchCount];
     for (var pageNo = 0; pageNo < searchCount; pageNo++){
         searchDisplay[pageNo].id = searchResults[pageNo].id;
         searchDisplay[pageNo].name = searchResults[pageNo].name;
@@ -33,7 +33,6 @@ function loadResults(div, searchResults) : void {
         searchDisplay[pageNo].snippet = searchResults[pageNo].snippet;
         searchDisplay[pageNo].dateLastCrawled = searchResults[pageNo].dateLastCrawled;
     }
-
     div.innerHTML = searchDisplay[1].name;
 }
 
