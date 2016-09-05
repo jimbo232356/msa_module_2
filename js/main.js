@@ -21,7 +21,10 @@ function changeUI() {
     resultsdiv.style.display = "block";
 }
 function loadResults(div, searchResults) {
-    var searchDisplay = new searchWebPages("", "", "", "", "", "");
+    var searchDisplay = [];
+    for (var i = 0; i < searchCount; i++) {
+        searchDisplay.push(new searchWebPages("", "", "", "", "", ""));
+    }
     for (var pageNo = 0; pageNo < searchCount; pageNo++) {
         searchDisplay[pageNo].id = searchResults[pageNo].id;
         searchDisplay[pageNo].name = searchResults[pageNo].name;
