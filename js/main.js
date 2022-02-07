@@ -59,7 +59,7 @@ function callBingRequest(s, callback) {
         "count": searchCount,
     };
     $.ajax({
-        url: "https://api.cognitive.microsoft.com/bing/v5.0/search?" + $.param(params),
+        url: "https://api.bing.microsoft.com/v7.0/search?" + $.param(params),
         beforeSend: function (xhrObj) {
             // Request headers
             xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", "795a284f50e24671a01f7f76e02207e3");
