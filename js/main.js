@@ -8,7 +8,7 @@ var resultsdiv = $("#resultsDiv")[0];
 var searchCount = 5;
 // Register button listeners
 searchbutton.addEventListener("click", function () {
-    pageheader.innerHTML = "Just a sec while we find";
+    pageheader.innerHTML = "Processing...";
     var div = resultsdiv;
     var s = document.getElementById("search").value;
     callBingRequest(s, function (searchResults) {
@@ -75,12 +75,12 @@ function callBingRequest(s, callback) {
             callback(webpages);
         }
         else {
-            pageheader.innerHTML = "Hmm, we can't find any results. Try another?";
+            pageheader.innerHTML = "No Results \n Please enter other words";
             $("#resultsDiv").empty();
         }
     })
         .fail(function (error) {
-        pageheader.innerHTML = "Sorry, something went wrong. :( Try again in a bit?";
+        pageheader.innerHTML = "Out of Orders :(";
         console.log(error.getAllResponseHeaders());
     });
 }
